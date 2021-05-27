@@ -41,14 +41,22 @@ ETL(extract, transform, load):              Data visualization:
 
 - see /../pond_data
 
+- Ctrl + Shift + B / NuGet package
+
+==========================================================================
+
+                        # Explore the Visual Studio solution
+
+==========================================================================
+
+Install required packages: NuGet
 
 
->>>
->> # Contribution
+>
+> # Contribution
 >
 > - Stephane Sob Fouodji
->>
+>
 > - Anton Delsink (Instructor)
 >
->
->>
+
