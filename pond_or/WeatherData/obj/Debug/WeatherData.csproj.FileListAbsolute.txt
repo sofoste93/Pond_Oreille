@@ -1,0 +1,6 @@
+A:\Workspace\VisualStudio\Pond_Oreille\WeatherData\bin\Debug\WeatherData.dll
+A:\Workspace\VisualStudio\Pond_Oreille\WeatherData\bin\Debug\WeatherData.pdb
+A:\Workspace\VisualStudio\Pond_Oreille\WeatherData\obj\Debug\WeatherData.csprojAssemblyReference.cache
+A:\Workspace\VisualStudio\Pond_Oreille\WeatherData\obj\Debug\WeatherData.csproj.CoreCompileInputs.cache
+A:\Workspace\VisualStudio\Pond_Oreille\WeatherData\obj\Debug\WeatherData.dll
+A:\Workspace\VisualStudio\Pond_Oreille\WeatherData\obj\Debug\WeatherData.pdb
