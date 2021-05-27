@@ -36,3 +36,15 @@ ETL(extract, transform, load):              Data visualization:
 ==========================================================================
 
 - see /../pond_data
+
+
+
+>>>
+>> # Contribution
+>
+> - Stephane Sob Fouodji
+>>
+> - Anton Delsink (Instructor)
+>
+>
+>>
