@@ -7,7 +7,9 @@ Learning C# by solving problems: Code Clinic - Case 1
 --------------------------------------------------------------
 
 ==========================================================================
+
                         # Solution overview
+
 ==========================================================================
 # (?) Is C# the right tool for this task
 
@@ -32,7 +34,21 @@ ETL(extract, transform, load):              Data visualization:
 4 - LiveCharts for drawing graphs
 
 ==========================================================================
+
                         # Explore the data with Excel
+
 ==========================================================================
 
 - see /../pond_data
+
+
+
+>>>
+>> # Contribution
+>
+> - Stephane Sob Fouodji
+>>
+> - Anton Delsink (Instructor)
+>
+>
+>>
