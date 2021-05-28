@@ -29,7 +29,7 @@ namespace Tests_WeatherData
 
             var wo = WeatherObservation.Parse(text);
 
-            Check.That(wo.TimeStamp).IsEqualTo(new DateTime(2012, 01, 01, 00, 02, 14));
+            Check.That(wo.TimeStamp).IsEqualTo(new DateTime(2012, 01, 01, 00, 02, 14)); // we use Check. from the library NFluent instead of traditional Assert.s
             Check.That(wo.Barometric_Pressure).IsCloseTo(30.5, 0.01);
         }
 
