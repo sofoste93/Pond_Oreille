@@ -1,7 +1,3 @@
-A:\Workspace\VisualStudio\Pond_Oreille\pond_or\Tests_WeatherData\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
-A:\Workspace\VisualStudio\Pond_Oreille\pond_or\Tests_WeatherData\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
-A:\Workspace\VisualStudio\Pond_Oreille\pond_or\Tests_WeatherData\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-A:\Workspace\VisualStudio\Pond_Oreille\pond_or\Tests_WeatherData\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
 A:\Workspace\VisualStudio\Pond_Oreille\pond_or\Tests_WeatherData\bin\Debug\Tests_WeatherData.dll
 A:\Workspace\VisualStudio\Pond_Oreille\pond_or\Tests_WeatherData\bin\Debug\Tests_WeatherData.pdb
 A:\Workspace\VisualStudio\Pond_Oreille\pond_or\Tests_WeatherData\bin\Debug\MathNet.Numerics.dll
@@ -13,7 +9,6 @@ A:\Workspace\VisualStudio\Pond_Oreille\pond_or\Tests_WeatherData\bin\Debug\Weath
 A:\Workspace\VisualStudio\Pond_Oreille\pond_or\Tests_WeatherData\bin\Debug\MathNet.Numerics.xml
 A:\Workspace\VisualStudio\Pond_Oreille\pond_or\Tests_WeatherData\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 A:\Workspace\VisualStudio\Pond_Oreille\pond_or\Tests_WeatherData\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-A:\Workspace\VisualStudio\Pond_Oreille\pond_or\Tests_WeatherData\bin\Debug\NFluent.pdb
 A:\Workspace\VisualStudio\Pond_Oreille\pond_or\Tests_WeatherData\bin\Debug\NFluent.xml
 A:\Workspace\VisualStudio\Pond_Oreille\pond_or\Tests_WeatherData\obj\Debug\Tests_WeatherData.csprojAssemblyReference.cache
 A:\Workspace\VisualStudio\Pond_Oreille\pond_or\Tests_WeatherData\obj\Debug\Tests_WeatherData.csproj.CoreCompileInputs.cache

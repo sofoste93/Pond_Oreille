@@ -26,7 +26,29 @@ namespace Weather
 
         public static bool TryParse(string text, out WeatherObservation wo)
         {
-            throw new NotImplementedException();
+            wo = new WeatherObservation()
+            {
+                TimeStamp = DateTime.MinValue,
+                Barometric_Pressure = float.NaN
+            };
+
+            var data = text.Split('\t');
+
+            if (data.Length != 8)
+                return false;
+
+            if (!DateTime.TryParse(data[(int)WeatherObservationMetrics.Date_Time].Replace("_", "-"), out DateTime timestamp))
+                return false;
+
+            if (!float.TryParse(data[(int)WeatherObservationMetrics.Barometric_Pressure], out float pressure))
+                return false;
+
+            wo = new WeatherObservation()
+            {
+                TimeStamp = timestamp,
+                Barometric_Pressure = pressure
+            };
+            return true;
         }
     }
 }

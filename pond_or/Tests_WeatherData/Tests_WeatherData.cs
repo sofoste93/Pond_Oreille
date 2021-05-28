@@ -11,7 +11,7 @@ namespace Tests_WeatherData
     [TestClass]
     public class Tests_WeatherData
     {
-        private static string filename = @"..\..\..\..\..\pond_data\Environmental_Data_Deep_Moor_2012.txt";
+        private static string filename = @"A:\Workspace\VisualStudio\Pond_Oreille\Environmental_Data_Deep_Moor_2012.txt";
 
         #region Sample Data
         private static string sampleData =
@@ -38,12 +38,12 @@ namespace Tests_WeatherData
         {
             var text = "2012_01_01 00:02:14	34.30	30.50	26.90	74.20	346.40	11.00	 3.60";
 
-            var tryParseOutcome = false; // TODO: Implement the TryParse method
+            var tryParseOutcome = WeatherObservation.TryParse(text, out WeatherObservation wo);
 
             Check.That(tryParseOutcome).IsTrue();
 
-            //Check.That(wo.TimeStamp).IsEqualTo(new DateTime(2012, 01, 01, 00, 02, 14));
-            //Check.That(wo.Barometric_Pressure).IsCloseTo(30.5, 0.01);
+            Check.That(wo.TimeStamp).IsEqualTo(new DateTime(2012, 01, 01, 00, 02, 14));
+            Check.That(wo.Barometric_Pressure).IsCloseTo(30.5, 0.01);
         }
 
         [TestMethod]
@@ -53,11 +53,9 @@ namespace Tests_WeatherData
             {
                 text.ReadLine(); // ignore 1st line of text, it contains headers.
 
-                // TODO: Implement WeatherData.ReadAll
+                var data = WeatherData.ReadAll(text);
 
-                // Check.That(data.Count()).IsEqualTo(4);
-
-                throw new NotImplementedException();
+                Check.That(data.Count()).IsEqualTo(4);
             }
         }
 
@@ -68,11 +66,9 @@ namespace Tests_WeatherData
             {
                 text.ReadLine(); // ignore 1st line of text, it contains headers.
 
-                //var data = WeatherData.ReadAll(text);
+                var data = WeatherData.ReadAll(text);
 
-                //Check.That(data.Count()).IsEqualTo(70675);
-
-                throw new NotImplementedException();
+                Check.That(data.Count()).IsEqualTo(70675);
             }
         }
 
@@ -86,11 +82,9 @@ namespace Tests_WeatherData
             {
                 text.ReadLine(); // ignore 1st line of text, it contains headers.
 
-                // TODO: Implement WeatherData.ReadRange
+                var data = WeatherData.ReadRange(text, start, end);
 
-                //Check.That(data.Count()).IsEqualTo(6);
-
-                throw new NotImplementedException();
+                Check.That(data.Count()).IsEqualTo(6);
             }
         }
 
@@ -104,13 +98,25 @@ namespace Tests_WeatherData
             {
                 text.ReadLine(); // ignore 1st line of text, it contains headers.
 
-                // Extract
-                // Transform
-                // Load
+                var data = from wo in WeatherData.ReadRange(text, start, end) // Extract
+                           select new // Transforming
+                           {
+                               Hours = (wo.TimeStamp - start).TotalHours,
+                               wo.Barometric_Pressure
+                           };
 
-                // MathNet.Numerics.Fit.Line(...);
+                var arrX = new List<double>();
+                var arrY = new List<double>();
 
-                throw new NotImplementedException();
+                foreach (var wo in data) // Load
+                {
+                    arrX.Add(wo.Hours);
+                    arrY.Add(wo.Barometric_Pressure);
+                }
+
+                var (intersect, slope) = MathNet.Numerics.Fit.Line(arrX.ToArray(), arrY.ToArray());
+
+                Check.That(slope).IsLessThan(0);
             }
         }
     }
